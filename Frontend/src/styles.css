@@ -1,0 +1,22 @@
+
+
+*{
+    user-select: none;
+}
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #e6e6e6;
+}
+
+mat-spinner{
+
+    margin: 30vh auto;
+
+}
+
+
+::-webkit-scrollbar{
+  display: none;
+}

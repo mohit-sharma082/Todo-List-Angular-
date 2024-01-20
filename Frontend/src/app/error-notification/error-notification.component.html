@@ -1,0 +1,15 @@
+<div class="err-heading">
+  Error
+</div>
+
+<div class="flex">
+  <div class="err-message">
+    {{data.message}}
+  </div>
+  <div>
+    <button mat-flat-button (click)="snackBarRef.dismiss()">
+      {{data.buttonText}}
+    </button>
+  </div>
+
+</div>

@@ -1,0 +1,18 @@
+.err-heading{
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.err-message{
+  width: fit-content;
+  font-weight: 600;
+  padding: 1rem 0;
+  -webkit-text-stroke: .5px black;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

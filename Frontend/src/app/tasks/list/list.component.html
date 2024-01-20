@@ -1,0 +1,61 @@
+
+
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<div class="wrapper"  *ngFor="let task of storedTasks">
+
+  <span
+  *ngIf="userIsAuthenticated && task.creator === userId"
+  matBadge="&#8288;"
+  matBadgeSize="small"
+  matBadgePosition="after"
+  matBadgeOverlap="true"
+  matBadgeColor="primary">&#8288;</span>
+  <mat-expansion-panel >
+
+    <mat-expansion-panel-header>
+      <mat-panel-title >
+      {{task.title}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+  <div class="flex">
+    <div class="task-image">
+      <img [src]="task.imagePath" alt="{{task.title}}" />
+    </div>
+
+    <mat-card-content>
+
+      <p class="task-description">{{task.description}}</p>
+    </mat-card-content>
+
+  </div>
+  <mat-chip  class="time-chip" color="accent" *ngIf="task.time != 'null'" >
+    Complete by - {{task.time}}
+  </mat-chip>
+
+
+    <mat-action-row *ngIf="userIsAuthenticated && task.creator === userId">
+
+      <button
+      mat-button color="primary"
+      [routerLink]="['/edit',task._id]">
+        EDIT
+      </button>
+
+      <button mat-button
+      color="warn"
+      (click)="onDelete(task._id)">
+      DELETE
+      </button>
+
+    </mat-action-row>
+
+  </mat-expansion-panel>
+</div>
+
+
+
+<p class="info-text mat-panel-title" *ngIf="storedTasks.length <= 0 && !isLoading">
+  No tasks to do.
+</p>

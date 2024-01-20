@@ -1,0 +1,75 @@
+mat-expansion-panel{
+    height: fit-content;
+    display: block;
+    margin: .7rem 0;
+
+    box-shadow: 1px 1px 10px gray;
+}
+.task-image, mat-card-content{
+  width: 50%;
+}
+.info-text{
+    width: fit-content;
+    padding: 1rem;
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.task-image{
+  max-height: 90vh;
+  width: 50%;
+  object-fit: contain
+}
+.task-image img{
+    max-width: 100%;
+    max-height: 85vh;
+    box-shadow: 1px 1px 5px #000000;
+}
+.task-image img:hover{
+    scale: 1.01;
+    box-shadow: 2px 2px 10px #000000;
+    transition: 400ms;
+    border-radius: 3px;
+}
+
+
+.task-description{
+  padding: 10px 15px;
+  word-wrap: break-word;
+  width: 90%;
+  height: fit-content;
+
+}
+.hide{
+  display: none;
+}
+
+.flex{
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+@media screen and (max-width:650px) {
+  .flex{
+    flex-direction: column;
+  }
+  .task-image, mat-card-content{
+    width: 100%;
+  }
+  .task-image img{
+    max-height: 70vh;
+  }
+}
+
+.time-chip{
+  justify-self: flex-end;
+}
+
+.wrapper{
+  position: relative;
+}
+span{
+  position: absolute;
+  z-index: 5;
+}

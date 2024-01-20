@@ -1,0 +1,47 @@
+
+
+mat-card{
+    width: 80vw;
+    margin: auto;
+    padding: 2vw;
+    box-shadow: 1px 1px 10px gray;
+}
+
+mat-card form button{
+    margin: 1rem 3rem 1rem 0;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.time-field{
+  width:fit-content;
+}
+
+input[type=file]{
+    visibility: hidden;
+    width: 20px;
+}
+
+
+.image-preview{
+    height: 6rem;
+    margin: 1rem 0;
+}
+
+
+.image-preview img{
+    height: 100%;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+}
+
+.flex button{
+  margin: 1rem 0rem;
+  width: fit-content;
+}
